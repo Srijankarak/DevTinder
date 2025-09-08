@@ -3,16 +3,16 @@ const express = require('express');
 const app = express();
 
 // Specific routes
-app.get("/test", (req, res) => {
+app.use("/test", (req, res) => {
     res.send("Hello from the server!");
 });
 
-app.get("/hello", (req, res) => {
+app.use("/hello", (req, res) => {
     res.send("Hello from the hello!");
 });
 
 // Default route (home)
-app.get("/", (req, res) => {
+app.use("/", (req, res) => {
     res.send("Namaste from the server Dashboard!");
 });
 
